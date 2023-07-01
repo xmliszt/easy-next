@@ -26,6 +26,8 @@ import installReactIcons from "./scripts/install-react-icons.js";
 import installNextAuth from "./scripts/install-next-auth.js";
 import installMomentJS from "./scripts/install-momentjs.js";
 import installLodash from "./scripts/install-lodash.js";
+import installWithoutChakraUI from "./scripts/install-without-chakraui.js";
+import installHuskyWithPrecommitHook from "./scripts/install-husky-with-precommit-hook.js";
 
 const prompt = inquirer.createPromptModule();
 const currentDir = process.cwd();
@@ -84,7 +86,15 @@ try {
     },
   ]);
 
-  const { unitTest, e2eTest, linterAndFormatter, husky, additionalFeatures } =
+  const { chakraUI } = await prompt([
+    {
+      name: "chakraUI",
+      message: "Do you want to integrate with Chakra UI?",
+      type: "confirm",
+    },
+  ]);
+
+  const { unitTest, e2eTest, linterAndFormatter, additionalFeatures } =
     await prompt([
       {
         name: "unitTest",
@@ -106,13 +116,6 @@ try {
         choices: [K.stylelint, K.prettier],
       },
       {
-        name: "husky",
-        message:
-          "Would you like to install Husky and create the following git hooks?",
-        type: "checkbox",
-        choices: [K.huskyPreCommit],
-      },
-      {
         name: "additionalFeatures",
         message:
           "Any additional convenient libraries you would like to install?",
@@ -127,14 +130,50 @@ try {
       },
     ]);
 
+  let husky;
+  if (unitTest.includes(K.jest)) {
+    const answer = await prompt([
+      {
+        name: "husky",
+        message:
+          "Since you have installed Jest testing framework, would you like to install Husky and set up a pre-commit hook?",
+        type: "list",
+        choices: [K.huskyInstallOnly, K.huskyPreCommit],
+      },
+    ]);
+    husky = answer.husky;
+  } else {
+    const answer = await prompt([
+      {
+        name: "husky",
+        message: "Would you like to install Husky?",
+        type: "list",
+        choices: [K.huskyInstallOnly],
+      },
+    ]);
+    husky = answer.husky;
+  }
   const projectDir = path.resolve(currentDir, projectName);
   const templateDir = path.resolve(__dirname, "template");
   createNextApp(projectName, templateDir);
-  spinner.start("Installing Chakra UI...");
-  await installChakraUI(projectDir, templateDir);
-  spinner.succeed("Chakra UI successfully installed!");
 
-  spinner.start("Setting up Progressive Web App (PWA)...");
+  if (chakraUI) {
+    spinner.start(
+      "Setting up project layout for PWA & SEO + Installing Chakra UI..."
+    );
+    await installChakraUI(projectDir, templateDir);
+    spinner.succeed(
+      "Chakra UI successfully installed! PWA & SEO successfully configured!"
+    );
+  } else {
+    spinner.start("Setting up project layout for PWA & SEO...");
+    await installWithoutChakraUI(projectDir, templateDir);
+    spinner.succeed("PWA & SEO configured successfully!");
+  }
+
+  spinner.start(
+    "Installing next-pwa, copying manifest.json and icons for PWA ..."
+  );
   await installPWA(projectDir, templateDir);
   spinner.succeed("PWA successfully set up!");
 
@@ -172,10 +211,16 @@ try {
     spinner.succeed("Prettier successfully installed!");
   }
 
-  if (husky.includes(K.huskyPreCommit)) {
-    spinner.start("Installing Husky and pre-commit hook...");
+  if (husky.includes(K.huskyInstallOnly)) {
+    spinner.start("Initialize Git & Installing Husky...");
     await installHusky(projectDir);
-    spinner.succeed("Husky successfully installed!");
+    spinner.succeed("Git initialized! Husky successfully installed!");
+  } else if (husky.includes(K.huskyPreCommit)) {
+    spinner.start("Initialize Git & Installing Husky and pre-commit hook...");
+    await installHuskyWithPrecommitHook(projectDir);
+    spinner.succeed(
+      "Git initialized! Husky and pre-commit hook successfully installed!"
+    );
   }
 
   if (additionalFeatures.includes(K.reactIcons)) {

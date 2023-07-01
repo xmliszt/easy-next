@@ -4,6 +4,60 @@ boostrapped with `TailwindCSS` and `ESLint`, configured with `PWA` and `SEO`, cr
 
 **NPM Package: https://www.npmjs.com/package/create-easy-next13-template-ts**
 
+## Run the Sample App
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Create a build
+
+```bash
+npm run build
+```
+
+## Linting
+
+```bash
+npm run lint
+```
+
+## (If you install Jest)
+
+To test
+
+```bash
+npm run test
+```
+
+## (If you install Cypress)
+
+To test
+
+```bash
+npm run cypress
+```
+
+## (If you install Playwright)
+
+To test
+
+```bash
+npm run test:e2e
+```
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
 ## Template Introduction
 
 A few things to take notes before you start:

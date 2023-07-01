@@ -37,18 +37,7 @@ export default async function installHusky(projectDir) {
                 rej("Unable to install Husky!");
                 return;
               }
-              spawn("npx", [
-                "husky",
-                "add",
-                path.join(projectDir, ".husky", "pre-commit"),
-                '"npm test"',
-              ]).on("close", (code) => {
-                if (code !== 0) {
-                  rej("Unable to install Husky!");
-                  return;
-                }
-                res();
-              });
+              res();
             }
           );
         });

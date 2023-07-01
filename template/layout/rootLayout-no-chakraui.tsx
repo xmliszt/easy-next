@@ -1,8 +1,7 @@
 import { Metadata } from "next";
-import { ChakraUIProvider } from "./chakraUIProvider";
 import "./globals.css";
 
-// Metdata for SEO
+// Metadata for SEO
 export const metadata: Metadata = {
   title: "NextJS Easy Template",
   description: "NextJS | TailwindCSS | ChakraUI easy template by Li Yuxuan",
@@ -76,9 +75,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <ChakraUIProvider>{children}</ChakraUIProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

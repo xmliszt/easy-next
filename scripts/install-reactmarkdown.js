@@ -20,6 +20,14 @@ export default async function installReactMarkdown(projectDir, templateDir) {
             path.join(templateDir, "config", "globals.d.ts"),
             path.join(projectDir, "globals.d.ts")
           );
+          fs.cpSync(
+            path.join(
+              templateDir,
+              "config",
+              "next-pwa-with-markdown.config.js"
+            ),
+            path.join(projectDir, "next.config.js")
+          );
           res();
         } else {
           rej("Unable to install React Markdown!");

@@ -24,6 +24,10 @@ const createNextApp = (name, templateDir) => {
     path.join(templateDir, "config", "gitignore"),
     path.join(projectDir, ".gitignore")
   );
+  fs.cpSync(
+    path.join(templateDir, "README.md"),
+    path.join(projectDir, "README.md")
+  );
 };
 
 export default createNextApp;

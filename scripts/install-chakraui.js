@@ -4,7 +4,6 @@ import spawn from "cross-spawn";
 
 export default async function installChakraUI(projectDir, templateDir) {
   return new Promise((res, rej) => {
-    const __dirname = process.cwd();
     // npm i @chakra-ui/react @chakra-ui/next-js @emotion/react @emotion/styled framer-motion
     spawn("npm", [
       "i",

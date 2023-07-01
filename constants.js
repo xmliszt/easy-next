@@ -12,7 +12,8 @@ const K = {
   eslint: "ESLint",
   stylelint: "Stylelint",
   prettier: "Prettier",
-  huskyPreCommit: "Install pre-commit hook to run linters",
+  huskyInstallOnly: "Install Husky only",
+  huskyPreCommit: "Install Husky and pre-commit hook",
   reactIcons: "React Icons (https://react-icons.github.io/react-icons)",
   nextAuth:
     "NextAuth.js (https://next-auth.js.org/getting-started/introduction)",
