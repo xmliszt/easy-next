@@ -1,17 +1,6 @@
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "css.lint.unknownAtRules": "ignore",
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": ["source.fixAll.format", "source.fixAll.eslint"],
-  "files.associations": {
-    "*.css": "tailwindcss"
-  },
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact"
-  ],
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "editor.fontFamily": "Operator Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true
 }
