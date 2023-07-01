@@ -162,7 +162,7 @@ try {
 
   if (linterAndFormatter.includes(K.stylelint)) {
     spinner.start("Installing Stylelint...");
-    await installStylelint(projectDir);
+    await installStylelint(projectDir, templateDir);
     spinner.succeed("Stylelint successfully installed");
   }
 
@@ -209,9 +209,17 @@ try {
   }
 
   logi(
-    chalk.bold.green(
-      `Installation complete! Try "cd ${projectName}" and "npm run dev" to run the example Next web app!`
-    )
+    chalk.green("Installation completed! Try ") +
+      chalk.bold.yellow(`cd ${projectName}`) +
+      chalk.green(" and ") +
+      chalk.bold.yellow("npm run dev") +
+      chalk.green(
+        " to run the example Next13 TypeScript web application. And see "
+      ) +
+      chalk.bold.yellow("PWA (Try in chrome and you can 'install' the app)") +
+      chalk.green(" and ") +
+      chalk.bold.yellow("SEO (Try share the web app)") +
+      chalk.green(" in actions!")
   );
 } catch (error) {
   if (error.isTtyError) {
