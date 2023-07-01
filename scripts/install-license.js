@@ -1,12 +1,10 @@
 import path from "path";
 import fs from "fs";
 
-export default async function installLicense(projectDir) {
+export default async function installLicense(projectDir, templateDir) {
   return new Promise((res) => {
-    const __dirname = process.cwd();
-    const templatePath = path.resolve(__dirname, "template");
     fs.cpSync(
-      path.join(templatePath, "LICENSE"),
+      path.join(templateDir, "LICENSE"),
       path.join(projectDir, "LICENSE")
     );
     res();

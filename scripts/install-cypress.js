@@ -4,7 +4,6 @@ import spawn from "cross-spawn";
 
 export default async function installCypress(projectDir) {
   return new Promise((res, rej) => {
-    const rootDir = process.cwd();
     spawn("npm", [
       "install",
       "--save-dev",

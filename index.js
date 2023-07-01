@@ -123,22 +123,23 @@ try {
     ]);
 
   const projectDir = path.resolve(currentDir, projectName);
-  createNextApp(projectName);
+  const templateDir = path.resolve(__dirname, "template");
+  createNextApp(projectName, templateDir);
   spinner.start("Installing Chakra UI...");
-  await installChakraUI(projectDir);
+  await installChakraUI(projectDir, templateDir);
   spinner.succeed("Chakra UI successfully installed!");
 
   spinner.start("Setting up Progressive Web App (PWA)...");
-  await installPWA(projectDir);
+  await installPWA(projectDir, templateDir);
   spinner.succeed("PWA successfully set up!");
 
   spinner.start("Retrieving MIT License...");
-  await installLicense(projectDir);
+  await installLicense(projectDir, templateDir);
   spinner.succeed("MIT License successfully copied!");
 
   if (unitTest.includes(K.jest)) {
     spinner.start("Installing Jest...");
-    await installJest(projectDir);
+    await installJest(projectDir, templateDir);
     spinner.succeed("Jest successfully installed!");
   }
 
@@ -162,7 +163,7 @@ try {
 
   if (linterAndFormatter.includes(K.prettier)) {
     spinner.start("Installing Prettier...");
-    await installPrettier(projectDir);
+    await installPrettier(projectDir, templateDir);
     spinner.succeed("Prettier successfully installed!");
   }
 
@@ -180,7 +181,7 @@ try {
 
   if (additionalFeatures.includes(K.nextAuth)) {
     spinner.start("Installing NextAuth.js...");
-    await installNextAuth(projectDir);
+    await installNextAuth(projectDir, templateDir);
     spinner.succeed("NextAuth.js successfully installed!");
   }
 
@@ -198,7 +199,7 @@ try {
 
   if (additionalFeatures.includes(K.reactMarkdown)) {
     spinner.start("Installing React Markdown...");
-    await installReactMarkdown(projectDir);
+    await installReactMarkdown(projectDir, templateDir);
     spinner.succeed("React Markdown successfully installed!");
   }
 

@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import spawn from "cross-spawn";
 
-const createNextApp = (name) => {
+const createNextApp = (name, templateDir) => {
   const rootDir = process.cwd();
   const projectDir = path.resolve(rootDir, name);
   const options = [
@@ -17,11 +17,11 @@ const createNextApp = (name) => {
     stdio: "inherit",
   });
   fs.cpSync(
-    path.join(rootDir, "template", "config", "next-pwa.config.js"),
+    path.join(templateDir, "config", "next-pwa.config.js"),
     path.join(projectDir, "next.config.js")
   );
   fs.cpSync(
-    path.join(rootDir, "template", "config", ".gitignore"),
+    path.join(templateDir, "config", ".gitignore"),
     path.join(projectDir, ".gitignore")
   );
 };
