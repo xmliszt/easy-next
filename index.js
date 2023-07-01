@@ -6,6 +6,11 @@ import chalk from "chalk";
 import K from "./constants.js";
 import createNextApp from "./scripts/create-next-app.js";
 import ora from "ora";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 import installChakraUI from "./scripts/install-chakraui.js";
 import installPWA from "./scripts/install-pwa.js";
