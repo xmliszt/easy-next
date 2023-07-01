@@ -15,10 +15,10 @@ A few things to take notes before you start:
 
 ## How to use
 
-- simply run `npx create-easy-next13-template-ts` and follow on screen instructions!
+- simply run `npx create-easy-next13-template-ts@latest` and follow on screen instructions!
 
 ```bash
-npx create-easy-next13-template-ts
+npx create-easy-next13-template-ts@latest
 ```
 
 ## Features
