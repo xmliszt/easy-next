@@ -16,7 +16,7 @@ export default function Home() {
     <main className="relative w-full min-h-screen p-24 flex flex-col gap-8 items-center justify-start">
       <div className="flex flex-col lg:flex-row gap-2 items-center lg:items-end justify-center">
         <Text fontSize="2xl" align="center">
-          Hello 👋 I&apos;m a NextJS 13 Template
+          Hello 👋 I&apos;m a NextJS 13 TypeScript Template
         </Text>
         <Tag>
           <Link href="https://xmliszt.github.io/" target="_blank">

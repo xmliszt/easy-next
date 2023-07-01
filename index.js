@@ -208,18 +208,18 @@ try {
     spinner.succeed("React Markdown successfully installed!");
   }
 
+  logi(chalk.green("Installation completed"));
   logi(
-    chalk.green("Installation completed! Try ") +
+    chalk.gray("Try ") +
       chalk.bold.yellow(`cd ${projectName}`) +
-      chalk.green(" and ") +
+      chalk.gray(" and ") +
       chalk.bold.yellow("npm run dev") +
-      chalk.green(
-        " to run the example Next13 TypeScript web application. And see "
-      ) +
+      chalk.gray(" to run the example Next13 TypeScript web application.")
+  );
+  logi(
+    chalk.gray("And see ") +
       chalk.bold.yellow("PWA (Try in chrome and you can 'install' the app)") +
-      chalk.green(" and ") +
-      chalk.bold.yellow("SEO (Try share the web app)") +
-      chalk.green(" in actions!")
+      chalk.gray(" in actions!")
   );
 } catch (error) {
   if (error.isTtyError) {
