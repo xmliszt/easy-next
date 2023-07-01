@@ -21,7 +21,7 @@ const createNextApp = (name, templateDir) => {
     path.join(projectDir, "next.config.js")
   );
   fs.cpSync(
-    path.join(templateDir, "config", ".gitignore"),
+    path.join(templateDir, "config", "gitignore"),
     path.join(projectDir, ".gitignore")
   );
 };

@@ -14,7 +14,7 @@ export default async function installStylelint(projectDir) {
     ]).on("close", (code) => {
       if (code === 0) {
         fs.cpSync(
-          path.join(rootDir, "template", "config", ".stylelintrc.json"),
+          path.join(rootDir, "template", "config", "stylelintrc.json"),
           path.join(projectDir, ".stylelintrc.json")
         );
         res();

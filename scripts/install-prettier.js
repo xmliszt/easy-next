@@ -14,12 +14,12 @@ export default async function installPrettier(projectDir, templateDir) {
     ]).on("close", (code) => {
       if (code === 0) {
         fs.cpSync(
-          path.join(templateDir, "config", ".prettierrc.json"),
+          path.join(templateDir, "config", "prettierrc.json"),
           path.join(projectDir, ".prettierrc.json")
         );
 
         fs.cpSync(
-          path.join(templateDir, "config", ".prettierignore"),
+          path.join(templateDir, "config", "prettierignore"),
           path.join(projectDir, ".prettierignore")
         );
 
