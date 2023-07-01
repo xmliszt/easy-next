@@ -1,6 +1,6 @@
 {
   "name": "create-easy-next13-template-ts",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "type": "module",
   "description": "Template tool to conveniently create your NextJS 13 project",
   "bin": {
