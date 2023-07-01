@@ -1,4 +1,5 @@
 const K = {
+  nan: "None",
   ts: "TypeScript",
   js: "JavaScript",
   tailwindcss: "TailwindCSS",
@@ -7,8 +8,10 @@ const K = {
   seo: "Include Search Engine Optimization (SEO) template",
   jest: "Unit Testing (Jest)",
   playwright: "E2E Testing (Playwright)",
+  cypress: "E2E Testing (Cypress)",
   eslint: "ESLint",
   stylelint: "Stylelint",
+  prettier: "Prettier",
   huskyPreCommit: "Install pre-commit hook to run linters",
   reactIcons: "React Icons (https://react-icons.github.io/react-icons)",
   nextAuth:

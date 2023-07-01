@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "extends": ["stylelint-config-standard"],
   "rules": {
     "at-rule-no-unknown": [
       true,
@@ -12,8 +12,6 @@
           "screen"
         ]
       }
-    ],
-    "declaration-block-trailing-semicolon": null,
-    "no-descending-specificity": null
+    ]
   }
 }

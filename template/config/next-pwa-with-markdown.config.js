@@ -16,12 +16,6 @@ const withPWA = require('next-pwa')({
 
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    appDir: true,
-  },
-  images: {
-    domains: ['example.com'],
-  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,
@@ -35,14 +29,6 @@ const nextConfig = {
         // Apply these headers to all routes in your application.
         source: '/:path*',
         headers: appSecurityHeaders,
-      },
-    ];
-  },
-  async rewrites() {
-    return [
-      {
-        source: '/example',
-        destination: '/example.html',
       },
     ];
   },
