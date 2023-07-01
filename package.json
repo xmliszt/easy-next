@@ -1,6 +1,6 @@
 {
   "name": "create-easy-next13-template-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Template tool to conveniently create your NextJS 13 project",
   "bin": {
@@ -8,17 +8,30 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xmliszt/next13-tailwind-chakra-typescript-template.git"
+    "url": "git+https://github.com/xmliszt/next13-easy-template.git"
   },
   "keywords": [
-    "template"
+    "template",
+    "next13",
+    "typescript",
+    "tailwindcss",
+    "chakra-ui",
+    "seo",
+    "pwa",
+    "jest",
+    "cypress",
+    "playwright",
+    "eslint",
+    "stylelint",
+    "prettier",
+    "husky"
   ],
   "author": "Li Yuxuan <xmliszt@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xmliszt/next13-tailwind-chakra-typescript-template/issues"
+    "url": "https://github.com/xmliszt/next13-easy-template/issues"
   },
-  "homepage": "https://github.com/xmliszt/next13-tailwind-chakra-typescript-template/blob/main/README.md",
+  "homepage": "https://github.com/xmliszt/next13-easy-template/blob/main/README.md",
   "dependencies": {
     "chalk": "^5.2.0",
     "cross-spawn": "^7.0.3",

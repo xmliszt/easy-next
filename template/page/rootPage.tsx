@@ -33,7 +33,7 @@ export default function Home() {
               href="https://nextjs.org/docs"
               target="_blank"
             >
-              Next 13 (App Directory)
+              Next 13 (App Router)
             </Link>{" "}
             template with{" "}
             <Link
