@@ -138,7 +138,7 @@ try {
         message:
           "Since you have installed Jest testing framework, would you like to install Husky and set up a pre-commit hook?",
         type: "list",
-        choices: [K.huskyInstallOnly, K.huskyPreCommit],
+        choices: [K.huskyInstallOnly, K.huskyPreCommit, K.nan],
       },
     ]);
     husky = answer.husky;
@@ -148,7 +148,7 @@ try {
         name: "husky",
         message: "Would you like to install Husky?",
         type: "list",
-        choices: [K.huskyInstallOnly],
+        choices: [K.huskyInstallOnly, K.nan],
       },
     ]);
     husky = answer.husky;
