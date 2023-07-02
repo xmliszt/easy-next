@@ -1,22 +1,43 @@
 # Hello 👋 I'm A Next13 TypeScript Template!
 
-boostrapped with `TailwindCSS` and `ESLint`, configured with `PWA` and `SEO`, created by [Li Yuxuan](https://xmliszt.github.io)
+<a href="
+https://www.npmjs.com/package/create-easy-next13-template-ts" target="__blank"><img src="https://img.shields.io/badge/-NPM%20Package%3A_create--easy--next13--template--ts-orange?logo=npm" /></a>
 
-**NPM Package: https://www.npmjs.com/package/create-easy-next13-template-ts**
+_bootstrapped with `TailwindCSS` and `ESLint`, configured with `PWA` and `SEO`, created by [Li Yuxuan](https://xmliszt.github.io)_
 
-## Template Introduction
+<center>
+
+```bash
+npx create-easy-next13-template-ts@latest
+```
+
+</center>
+
+- [Hello 👋 I'm A Next13 TypeScript Template!](#hello--im-a-next13-typescript-template)
+  - [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Features](#features)
+  - [Remove Search Engine Optimization (SEO)](#remove-search-engine-optimization-seo)
+  - [Remove Progressive Web App (PWA)](#remove-progressive-web-app-pwa)
+  - [Remove ESLint](#remove-eslint)
+  - [Remove TailwindCSS](#remove-tailwindcss)
+
+![Poster](poster.png)
+![Demo](demo.gif)
+
+## Getting Started
 
 A few things to take notes before you start:
 
 - This is a TypeScript template. JavaScript is currently not supported.
-- The template will install the latest **NextJS** version (Next13), with the "App Router" mode enabled. If you are more familiar with the traditional "Pages Router", feel free to change the example application. (For more details about "App Router" vs "Pages Router", visit [NextJS Documentation](https://nextjs.org/docs) to find out more!)
+- The template will install the latest **NextJS** version (Next13), with the "**App Router**" mode enabled. If you are more familiar with the traditional "Pages Router", feel free to change the example application. (For more details about "App Router" vs "Pages Router", visit [NextJS Documentation](https://nextjs.org/docs) to find out more!)
 - The template will also by default include the followings. Feel free to modify or remove any of them if you don't want to include them in your project. **Instructions on how to remove them are documented at the end of this README.**
   - Install TailwindCSS
   - Install ESLint
   - Set up PWA
   - Set up SEO
 
-## How to use
+## Installation
 
 - simply run `npx create-easy-next13-template-ts@latest` and follow on screen instructions!
 
@@ -40,11 +61,11 @@ npx create-easy-next13-template-ts@latest
 
 ## Remove Search Engine Optimization (SEO)
 
-The project is automatically configured with sample SEO approach. You can find the details in `app/layout.tsx`, where you see the `export const metadata: Metadata = {...}` is being defined. If you wish to remove SEO, simply remove the entire metdata block. For more information about metdata in Next13, check out: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
+The project is automatically configured with sample SEO approach. You can find the details in `app/layout.tsx`, where you see the `export const metadata: Metadata = {...}` is being defined. If you wish to remove SEO, simply remove the entire metadata block. For more information about metadata in Next13, check out: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
 
 ## Remove Progressive Web App (PWA)
 
-The project is by default boostrapped with PWA using `next-pwa`. If you wish to remove PWA, you can follow the below steps:
+The project is by default bootstrapped with PWA using `next-pwa`. If you wish to remove PWA, you can follow the below steps:
 
 1. Go to `next.config.js` in root directory, remove anything related to PWA, namely `withPWA` and change `module.exports = withPWA(nextConfig);` into `module.exports = nextConfig;`
 2. Go to `public/` and remove `manifest.json`
