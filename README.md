@@ -1,7 +1,6 @@
 # Hello 👋 I'm A Next13 TypeScript Template!
 
-<a href="
-https://www.npmjs.com/package/create-easy-next13-template-ts" target="__blank"><img src="https://img.shields.io/badge/-NPM%20Package%3A_create--easy--next13--template--ts-orange?logo=npm" /></a>
+<a href="https://www.npmjs.com/package/create-easy-next13-template-ts" target="__blank"><img src="https://img.shields.io/badge/-NPM%20Package%3A_create--easy--next13--template--ts-orange?logo=npm" /></a>
 
 _bootstrapped with `TailwindCSS` and `ESLint`, configured with `PWA` and `SEO`, created by [Li Yuxuan](https://xmliszt.github.io)_
 
