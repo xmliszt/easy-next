@@ -21,8 +21,8 @@ npx create-easy-next13-template-ts@latest
   - [Remove ESLint](#remove-eslint)
   - [Remove TailwindCSS](#remove-tailwindcss)
 
-![Poster](poster.png)
-![Demo](demo.gif)
+![Poster](https://github.com/xmliszt/next13-easy-template/blob/release/poster.png?raw=true)
+![Demo](https://github.com/xmliszt/next13-easy-template/blob/release/demo.gif?raw=true)
 
 ## Getting Started
 
