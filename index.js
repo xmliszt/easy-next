@@ -28,6 +28,7 @@ import installMomentJS from "./scripts/install-momentjs.js";
 import installLodash from "./scripts/install-lodash.js";
 import installWithoutChakraUI from "./scripts/install-without-chakraui.js";
 import installHuskyWithPrecommitHook from "./scripts/install-husky-with-precommit-hook.js";
+import installMUI from "./scripts/install-mui.js";
 
 const prompt = inquirer.createPromptModule();
 const currentDir = process.cwd();
@@ -86,11 +87,12 @@ try {
     },
   ]);
 
-  const { chakraUI } = await prompt([
+  const { uiLibrary } = await prompt([
     {
-      name: "chakraUI",
-      message: "Do you want to integrate with Chakra UI?",
-      type: "confirm",
+      name: "uiLibrary",
+      message: "Do you want to integrate with any UI Library?",
+      type: "list",
+      choices: [K.chakraui, K.mui, K.nan],
     },
   ]);
 
@@ -157,13 +159,21 @@ try {
   const templateDir = path.resolve(__dirname, "template");
   createNextApp(projectName, templateDir);
 
-  if (chakraUI) {
+  if (uiLibrary.includes(K.chakraui)) {
     spinner.start(
       "Setting up project layout for PWA & SEO + Installing Chakra UI..."
     );
     await installChakraUI(projectDir, templateDir);
     spinner.succeed(
       "Chakra UI successfully installed! PWA & SEO successfully configured!"
+    );
+  } else if (uiLibrary.includes(K.mui)) {
+    spinner.start(
+      "Setting up project layout for PWA & SEO + Installing Material UI..."
+    );
+    await installMUI(projectDir, templateDir);
+    spinner.succeed(
+      "Material UI successfully installed! PWA & SEO successfully configured!"
     );
   } else {
     spinner.start("Setting up project layout for PWA & SEO...");
