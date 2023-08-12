@@ -29,6 +29,7 @@ import installLodash from "./scripts/install-lodash.js";
 import installWithoutChakraUI from "./scripts/install-without-chakraui.js";
 import installHuskyWithPrecommitHook from "./scripts/install-husky-with-precommit-hook.js";
 import installMUI from "./scripts/install-mui.js";
+import installRadixUI from "./scripts/install-radix.js";
 
 const prompt = inquirer.createPromptModule();
 const currentDir = process.cwd();
@@ -92,7 +93,7 @@ try {
       name: "uiLibrary",
       message: "Do you want to integrate with any UI Library?",
       type: "list",
-      choices: [K.chakraui, K.mui, K.nan],
+      choices: [K.chakraui, K.mui, K.radix, K.nan],
     },
   ]);
 
@@ -174,6 +175,14 @@ try {
     await installMUI(projectDir, templateDir);
     spinner.succeed(
       "Material UI successfully installed! PWA & SEO successfully configured!"
+    );
+  } else if (uiLibrary.includes(K.radix)) {
+    spinner.start(
+      "Setting up project layout for PWA & SEO + Installing Radix UI..."
+    );
+    await installRadixUI(projectDir, templateDir);
+    spinner.succeed(
+      "Radix UI successfully installed! PWA & SEO successfully configured!"
     );
   } else {
     spinner.start("Setting up project layout for PWA & SEO...");

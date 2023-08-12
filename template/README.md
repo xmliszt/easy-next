@@ -14,8 +14,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## Create a build
 
 ```bash
@@ -82,7 +80,7 @@ npx create-easy-next13-template-ts@latest
 
 - A TypeScript Next 13 (App Router) template with
   [TailwindCSS](https://tailwindcss.com) and [ESLint](https://eslint.org) supported by default.
-- Optional UI library [Chakra UI](https://chakra-ui.com) to be installed.
+- Optional UI library [Chakra UI](https://chakra-ui.com), [Material UI](https://mui.com) to be installed.
 - [Progressive Web App (PWA)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) enabled (with next-pwa)
 - [Search Engine Optimization (SEO)](https://support.google.com/webmasters/answer/7451184?hl=en/) is included (with [NextJS Metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata))
 - Optional third-party libraries such as: [React Icons](https://react-icons.github.io/react-icons/), [NextAuth.js](https://next-auth.js.org), [Lodash](https://lodash.com), [Moment.js](https://momentjs.com) to be installed.

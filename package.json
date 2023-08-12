@@ -1,10 +1,10 @@
 {
-  "name": "create-easy-next13-template-ts",
+  "name": "easy-next",
   "version": "1.1.0",
   "type": "module",
   "description": "Template tool to conveniently create your NextJS 13 project",
   "bin": {
-    "create-easy-next13-template-ts": "./index.js"
+    "easy-next": "./index.js"
   },
   "repository": {
     "type": "git",

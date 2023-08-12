@@ -1,13 +1,13 @@
 # Hello 👋 I'm A Next13 TypeScript Template!
 
-<a href="https://www.npmjs.com/package/create-easy-next13-template-ts" target="__blank"><img src="https://img.shields.io/badge/-NPM%20Package%3A_create--easy--next13--template--ts-orange?logo=npm" /></a>
+<a href="https://www.npmjs.com/package/create-easy-next13-template-ts" target="__blank"><img src="https://img.shields.io/badge/-v1.2.0-green?logo=npm" /></a>
 
 _bootstrapped with `TailwindCSS` and `ESLint`, configured with `PWA` and `SEO`, created by [Li Yuxuan](https://xmliszt.github.io)_
 
 <center>
 
 ```bash
-npx create-easy-next13-template-ts@latest
+npx easy-next@latest
 ```
 
 </center>
@@ -16,7 +16,17 @@ DEV Blog Post 👉🏻: https://dev.to/xmliszt/simplify-your-nextjs-13-app-route
 
 ---
 
+### What's New?
+
+v1.2.0
+
+- Integrated with Radix UI (https://www.radix-ui.com)
+- Command made simpler and shorter! `npx easy-next@latest`
+
+---
+
 - [Hello 👋 I'm A Next13 TypeScript Template!](#hello--im-a-next13-typescript-template)
+  - [What's New?](#whats-new)
   - [Getting Started](#getting-started)
   - [Installation](#installation)
   - [Features](#features)
@@ -42,17 +52,17 @@ A few things to take notes before you start:
 
 ## Installation
 
-- simply run `npx create-easy-next13-template-ts@latest` and follow on screen instructions!
+- simply run `npx easy-next@latest` and follow on screen instructions!
 
 ```bash
-npx create-easy-next13-template-ts@latest
+npx easy-next@latest
 ```
 
 ## Features
 
 - A TypeScript Next 13 (App Router) template with
   [TailwindCSS](https://tailwindcss.com) and [ESLint](https://eslint.org) supported by default.
-- Optional UI library [Chakra UI](https://chakra-ui.com), [Material UI](https://mui.com) to be installed.
+- Optional UI library [Chakra UI](https://chakra-ui.com), [Material UI](https://mui.com), [Radix UI](https://www.radix-ui.com) to be installed.
 - [Progressive Web App (PWA)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) enabled (with next-pwa)
 - [Search Engine Optimization (SEO)](https://support.google.com/webmasters/answer/7451184?hl=en/) is included (with [NextJS Metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata))
 - Optional third-party libraries such as: [React Icons](https://react-icons.github.io/react-icons/), [NextAuth.js](https://next-auth.js.org), [Lodash](https://lodash.com), [Moment.js](https://momentjs.com) to be installed.

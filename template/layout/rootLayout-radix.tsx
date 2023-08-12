@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 import "./globals.css";
-import { MUIThemeProvider } from "./MUIThemeProvider";
+import { RadixThemeProvider } from "./RadixThemeProvider";
 
 // Metadata for SEO
 export const metadata: Metadata = {
   title: "NextJS Easy Template",
-  description: "NextJS | TailwindCSS | Material UI easy template by Li Yuxuan",
+  description: "NextJS | TailwindCSS | RadixUI easy template by Li Yuxuan",
   manifest: "/manifest.json",
   appleWebApp: {
     title: "NextJS Easy Template",
@@ -40,8 +40,7 @@ export const metadata: Metadata = {
   category: "technology",
   openGraph: {
     title: "NextJS Easy Template",
-    description:
-      "NextJS | TailwindCSS | Material UI easy template by Li Yuxuan",
+    description: "NextJS | TailwindCSS | RadixUI easy template by Li Yuxuan",
     url: "http://localhost:3000",
     siteName: "Taboo AI",
     images: [
@@ -58,8 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "NextJS Easy Template",
-    description:
-      "NextJS | TailwindCSS | Material UI easy template by Li Yuxuan",
+    description: "NextJS | TailwindCSS | RadixUI easy template by Li Yuxuan",
     siteId: "1704579643",
     creator: "@xmliszt",
     creatorId: "1704579643",
@@ -79,7 +77,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <MUIThemeProvider>{children}</MUIThemeProvider>
+        <RadixThemeProvider>{children}</RadixThemeProvider>
       </body>
     </html>
   );

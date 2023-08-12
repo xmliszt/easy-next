@@ -5,6 +5,7 @@ const K = {
   tailwindcss: "TailwindCSS",
   chakraui: "Chakra UI",
   mui: "Material UI",
+  radix: "Radix UI",
   pwa: "Enable Progressive Web App (PWA)",
   seo: "Include Search Engine Optimization (SEO) template",
   jest: "Unit Testing (Jest)",
