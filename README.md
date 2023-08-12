@@ -1,6 +1,6 @@
 # Hello 👋 I'm A Next13 TypeScript Template!
 
-<a href="https://www.npmjs.com/package/create-easy-next13-template-ts" target="__blank"><img src="https://img.shields.io/badge/-v1.2.0-green?logo=npm" /></a>
+<a href="https://www.npmjs.com/package/easy-next" target="__blank"><img src="https://img.shields.io/badge/-v1.2.0-green?logo=npm" /></a>
 
 _bootstrapped with `TailwindCSS` and `ESLint`, configured with `PWA` and `SEO`, created by [Li Yuxuan](https://xmliszt.github.io)_
 
@@ -11,8 +11,6 @@ npx easy-next@latest
 ```
 
 </center>
-
-DEV Blog Post 👉🏻: https://dev.to/xmliszt/simplify-your-nextjs-13-app-router-development-with-npx-create-easy-next13-template-tslatest-1l4a
 
 ---
 

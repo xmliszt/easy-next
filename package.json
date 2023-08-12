@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xmliszt/next13-easy-template.git"
+    "url": "git+https://github.com/xmliszt/easy-next.git"
   },
   "keywords": [
     "template",
@@ -29,9 +29,9 @@
   "author": "Li Yuxuan <xmliszt@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xmliszt/next13-easy-template/issues"
+    "url": "https://github.com/xmliszt/easy-next/issues"
   },
-  "homepage": "https://github.com/xmliszt/next13-easy-template/blob/main/README.md",
+  "homepage": "https://github.com/xmliszt/easy-next/blob/main/README.md",
   "dependencies": {
     "chalk": "^5.2.0",
     "cross-spawn": "^7.0.3",
