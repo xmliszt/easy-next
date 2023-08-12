@@ -33,7 +33,7 @@ v1.2.0
   - [Remove ESLint](#remove-eslint)
   - [Remove TailwindCSS](#remove-tailwindcss)
 
-![Poster](https://github.com/xmliszt/next13-easy-template/blob/release/poster.png?raw=true)
+![Poster](https://i.ibb.co/WfGzSzn/easy-next-poster.png)
 ![Demo](https://github.com/xmliszt/next13-easy-template/blob/release/demo.gif?raw=true)
 
 ## Getting Started
