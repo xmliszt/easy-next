@@ -1,6 +1,6 @@
 {
   "name": "easy-next",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "type": "module",
   "description": "Template tool to conveniently create your NextJS 13 project",
   "bin": {
