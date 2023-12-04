@@ -100,3 +100,9 @@ The project is by default installed with TailwindCSS integration with Next13. If
 Feel free to remove / modify any pre-installed packages to suit your own needs!
 
 😈 Happy Hacking!
+
+# Contribute
+
+To contribute, simply fork the project, `npm i` and then `node index.js` to run development version.
+
+You can find issues to work on in the "Issues" tab in GitHub. Or you can create your own issue and work on your improvements / suggestions.
