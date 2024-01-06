@@ -5,6 +5,7 @@ import inquirer from "inquirer";
 import chalk from "chalk";
 import K from "./constants.js";
 import createNextApp from "./scripts/create-next-app.js";
+import createNextAppJs from "./scripts/create-next-app-no-typescript.js";
 import ora from "ora";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
@@ -88,6 +89,15 @@ try {
     },
   ]);
 
+  const { projectType } = await prompt( [
+    {
+      name: "projectType",
+      message: "What would you like to use?",
+      type: "list",
+      choices: [K.ts, K.js],
+
+    }
+  ]);
   const { uiLibrary } = await prompt([
     {
       name: "uiLibrary",
@@ -158,7 +168,13 @@ try {
   }
   const projectDir = path.resolve(currentDir, projectName);
   const templateDir = path.resolve(__dirname, "template");
-  createNextApp(projectName, templateDir);
+
+  if (projectType.includes(K.ts)){
+    createNextApp(projectName, templateDir);
+  }else{
+    createNextAppJs(projectName, templateDir)
+
+  }
 
   if (uiLibrary.includes(K.chakraui)) {
     spinner.start(
